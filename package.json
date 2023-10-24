@@ -5,7 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:staged": "jest"
+    "test:staged": "jest",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint 'src/**' --fix",
+      "npm run test:staged"
+    ],
+    "*.js": "eslint --cache --fix"
   },
   "keywords": [],
   "author": "",
