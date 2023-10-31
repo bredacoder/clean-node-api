@@ -1,11 +1,11 @@
 import type { Config } from 'jest'
 
 const config: Config = {
-  roots: ['<rootDir>/src'],
+  roots: ['<rootDir>', '<rootDir>/src'],
+  moduleDirectories: ['node_modules'],
   collectCoverageFrom: [
     '<rootDir>/src/**/*.ts',
     '!<rootDir>/src/**/protocols/*.ts',
-    '!<rootDir>/src/presentation/controllers/signup/signup-protocols.ts',
   ],
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
