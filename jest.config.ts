@@ -13,6 +13,7 @@ const config: Config = {
   transform: {
     '.+\\.ts$': 'ts-jest',
   },
+  watchPathIgnorePatterns: ['<rootDir>/globalConfig.json'],
 }
 
 export default config
