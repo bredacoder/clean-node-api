@@ -5,7 +5,9 @@ const config: Config = {
   moduleDirectories: ['node_modules'],
   collectCoverageFrom: [
     '<rootDir>/src/**/*.ts',
-    '!<rootDir>/src/**/protocols/*.ts',
+    '!<rootDir>/src/main/**',
+    '!<rootDir>/src/**/*-protocols*',
+    '!**/protocols/**',
   ],
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
