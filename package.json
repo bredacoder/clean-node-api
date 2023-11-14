@@ -1,8 +1,7 @@
 {
   "name": "clean-node-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "NodeJS Rest API using TDD, Clean Architecture and Typescript",
   "scripts": {
     "start": "sucrase-node src/main/server.ts",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand --detectOpenHandles",
@@ -21,7 +20,7 @@
     "*.js": "eslint --cache --fix"
   },
   "keywords": [],
-  "author": "",
+  "author": "Daniel Breda",
   "license": "ISC",
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.1.0",
