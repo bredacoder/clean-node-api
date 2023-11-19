@@ -4,7 +4,7 @@ import {
   InternalServerError,
   Ok,
   Unauthorized,
-} from '../../helpers/http-helper'
+} from '../../helpers/http/http-helper'
 import { LoginController } from './login'
 import { Authentication, HttpRequest, Validation } from './login-protocols'
 

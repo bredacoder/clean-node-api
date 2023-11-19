@@ -1,4 +1,8 @@
-import { BadRequest, InternalServerError, Ok } from '../../helpers/http-helper'
+import {
+  BadRequest,
+  InternalServerError,
+  Ok,
+} from '../../helpers/http/http-helper'
 import {
   AddAccount,
   Controller,

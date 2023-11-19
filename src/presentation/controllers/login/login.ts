@@ -3,7 +3,7 @@ import {
   InternalServerError,
   Ok,
   Unauthorized,
-} from '../../helpers/http-helper'
+} from '../../helpers/http/http-helper'
 import {
   Authentication,
   Controller,
