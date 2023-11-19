@@ -53,6 +53,7 @@ const makeValidation = (): Validation => {
 
   return new ValidationStub()
 }
+
 const makeAddAccount = (): AddAccount => {
   class AddAccountStub implements AddAccount {
     async add(account: AddAccountModel): Promise<AccountModel> {
