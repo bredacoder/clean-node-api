@@ -123,7 +123,7 @@ describe('DbAuthentication Usecase', () => {
     )
   })
 
-  test('Should trhow if HashComparer throws', async () => {
+  test('Should throw if HashComparer throws', async () => {
     const { sut, hashComparerStub } = makeSut()
     jest
       .spyOn(hashComparerStub, 'compare')
@@ -156,5 +156,18 @@ describe('DbAuthentication Usecase', () => {
     await sut.auth(makeFakeAuthentication())
 
     expect(generateSpy).toHaveBeenCalledWith(makeFakeAccount().id)
+  })
+
+  test('Should throw if TokenGenerator throws', async () => {
+    const { sut, tokenGeneratorStub } = makeSut()
+    jest
+      .spyOn(tokenGeneratorStub, 'generate')
+      .mockReturnValueOnce(
+        new Promise((resolve, reject) => reject(new Error())),
+      )
+
+    const promise = sut.auth(makeFakeAuthentication())
+
+    await expect(promise).rejects.toThrow()
   })
 })
