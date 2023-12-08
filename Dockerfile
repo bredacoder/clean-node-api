@@ -1,5 +1,4 @@
-FROM node:14
-RUN mkdir -p /usr/src/clean-node-api
+FROM node:18-alpine
 WORKDIR /usr/src/clean-node-api
 COPY ./package.json .
 RUN npm install --omit=dev

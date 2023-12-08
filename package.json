@@ -12,7 +12,7 @@
     "test:integration": "npm test -- --watch -c jest-integration-config.ts",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
-    "prepare": "husky install"
+    "prepare": "npx husky install"
   },
   "lint-staged": {
     "*.ts": [
@@ -55,6 +55,6 @@
     "validator": "^13.11.0"
   }, 
   "engines": {
-    "node": "14.x"
+    "node": "18.x"
   }
 }
