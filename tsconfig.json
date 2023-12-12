@@ -4,7 +4,8 @@
     "module": "commonjs",
     "target": "ES2021",
     "sourceMap": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "rootDir": "src"
   },
   "include": [
     "src"
