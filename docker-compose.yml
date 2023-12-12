@@ -19,6 +19,6 @@ services:
      - ./package.json:/usr/src/clean-node-api/package.json
     ports: 
      - "8080:8080"
-     - "9222:9222"
+     - "9229:9229"
     links: 
      - mongo
