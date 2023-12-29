@@ -5,13 +5,18 @@
     "target": "ES2021",
     "sourceMap": true,
     "esModuleInterop": true,
-    "rootDir": "src"
+    "rootDir": "src",
+    "baseUrl": "./src",
+    "paths": {
+      "@data/*": ["data/*"],
+      "@domain/*": ["domain/*"],
+      "@infra/*": ["infra/*"],
+      "@main/*": ["main/*"],
+      "@presentation/*": ["presentation/*"],
+      "@validation/*": ["validation/*"],
+    }
   },
   "include": [
     "src"
   ],
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ]
 }

@@ -16,6 +16,14 @@
     "test:ci": "npm test -- --coverage",
     "prepare": "npx husky install"
   },
+  "_moduleAliases": {
+    "@data": "dist/data",
+    "@domain": ["dist/domain"],
+    "@infra": ["dist/infra"],
+    "@main": ["dist/main"],
+    "@presentation": ["dist/presentation"],
+    "@validation": ["dist/validation"]
+  },
   "lint-staged": {
     "*.ts": [
       "eslint 'src/**' --fix",
@@ -52,6 +60,7 @@
     "bcrypt": "^5.1.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
     "mongodb": "^5.9.0",
     "nodemon": "^3.0.2",
     "validator": "^13.11.0"
