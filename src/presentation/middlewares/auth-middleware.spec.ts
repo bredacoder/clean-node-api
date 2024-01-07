@@ -1,13 +1,15 @@
 import { AccessDeniedError } from '@presentation/errors'
 import {
   Forbidden,
-  InternalServerError,
   Ok,
+  InternalServerError,
 } from '@presentation/helpers/http/http-helper'
+import {
+  LoadAccountByToken,
+  HttpRequest,
+  AccountModel,
+} from './auth-middleware-protocols'
 import { AuthMiddleware } from './auth-middleware'
-import { LoadAccountByToken } from '@domain/usecases/load-account-by-token'
-import { AccountModel } from '@domain/models/account'
-import { HttpRequest } from '@presentation/protocols'
 
 interface SutTypes {
   sut: AuthMiddleware
