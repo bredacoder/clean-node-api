@@ -14,15 +14,26 @@
     "test:integration": "npm test -- --watch -c jest-integration-config.ts",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
+    "test:coveralls": "npm run test:ci && coveralls < ./coverage/lcov.info",
     "prepare": "npx husky install"
   },
   "_moduleAliases": {
     "@data": "dist/data",
-    "@domain": ["dist/domain"],
-    "@infra": ["dist/infra"],
-    "@main": ["dist/main"],
-    "@presentation": ["dist/presentation"],
-    "@validation": ["dist/validation"]
+    "@domain": [
+      "dist/domain"
+    ],
+    "@infra": [
+      "dist/infra"
+    ],
+    "@main": [
+      "dist/main"
+    ],
+    "@presentation": [
+      "dist/presentation"
+    ],
+    "@validation": [
+      "dist/validation"
+    ]
   },
   "lint-staged": {
     "*.ts": [
@@ -44,6 +55,7 @@
     "@types/node": "^20.8.7",
     "@types/supertest": "^2.0.15",
     "@types/validator": "^13.11.5",
+    "coveralls": "^3.1.1",
     "eslint": "^8.52.0",
     "git-commit-msg-linter": "^5.0.4",
     "husky": "^8.0.3",
